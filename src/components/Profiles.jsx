@@ -19,7 +19,7 @@ function Footer() {
       <footer className="w-full py-4 px-8 bg-black text-sm text-center absolute bottom-0 left-0 font-medium">
         <div className="flex flex-col items-center">
           <img 
-            src="./src/assets/w-prime-logo.png" 
+            src="../public/assets/w-prime-logo.png"
             alt="Prime Video Logo"
             className="w-24 h-auto" 
           />
