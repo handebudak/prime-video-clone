@@ -19,7 +19,7 @@ function Footer() {
       <footer className="w-full py-4 px-8 bg-black text-sm text-center absolute bottom-0 left-0 font-medium">
         <div className="flex flex-col items-center">
           <img 
-            src="../public/assets/w-prime-logo.png"
+            src="/assets/w-prime-logo.png"
             alt="Prime Video Logo"
             className="w-24 h-auto" 
           />
@@ -44,31 +44,32 @@ function Footer() {
 
 export default function Profiles() {
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center text-white relative">
-      <Navbar />
-      <h1 className="text-4xl font-bold mb-20">Kim izliyor?</h1>
-      <div className="flex space-x-12">
-        {profiles.map((profile) => (
-          <div key={profile.id} className="flex flex-col items-center">
-            <img
-              src={`https://ui-avatars.com/api/?name=${profile.name}&background=random`}
-              alt={profile.name}
-              className="w-32 h-32 rounded-full cursor-pointer hover:opacity-80 transition-opacity"
-            />
-            <span className="mt-2 text-lg">{profile.name}</span>
-          </div>
-        ))}
-        <div className="flex flex-col items-center">
-          <div className="w-32 h-32 rounded-full bg-gray-600 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
-            <span className="text-3xl">+</span>
-          </div>
-          <span className="mt-2 text-lg">Yeni ekle</span>
-        </div>
+    <div className="min-h-screen bg-black flex flex-col items-center justify-start text-white relative pt-24">
+  <Navbar />
+  <h1 className="text-4xl font-bold mb-20">Kim izliyor?</h1>
+  <div className="flex space-x-12 mt-2">
+    {profiles.map((profile) => (
+      <div key={profile.id} className="flex flex-col items-center">
+        <img
+          src={`https://ui-avatars.com/api/?name=${profile.name}&background=random`}
+          alt={profile.name}
+          className="w-34 h-34 rounded-full cursor-pointer hover:opacity-80 transition-opacity"
+        />
+        <span className="mt-2 text-lg">{profile.name}</span>
       </div>
-      <button className="mt-26 px-6 py-4 font-bold bg-gray-700 hover:bg-gray-600 transition-colors rounded-lg text-white text-xl">
-        Profili düzenle
-      </button>
-      <Footer />
+    ))}
+    <div className="flex flex-col items-center">
+      <div className="w-34 h-34 rounded-full bg-gray-600 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+        <span className="text-3xl">+</span>
+      </div>
+      <span className="mt-2 text-lg">Yeni ekle</span>
     </div>
+  </div>
+  <button className="mt-40 px-6 py-4 font-bold bg-gray-700 hover:bg-gray-600 transition-colors rounded-lg text-white text-xl">
+    Profili düzenle
+  </button>
+  <Footer />
+</div>
+
   );
 }
