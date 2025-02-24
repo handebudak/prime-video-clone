@@ -8,7 +8,7 @@ const profiles = [
 
 function Navbar() {
   return (
-    <nav className="w-full py-4 px-8 bg-black text-white text-xl font-semibold absolute top-0 left-0">
+    <nav className="w-full py-4 px-10 bg-black text-white text-2xl font-bold absolute top-0 left-0">
       prime video
     </nav>
   );
