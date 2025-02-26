@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const profiles = [
   { id: 1, name: "Chris" },
@@ -40,17 +41,23 @@ function Footer() {
 }
 
 export default function Profiles() {
+  const navigate = useNavigate(); // Yönlendirme için
+
   return (
     <div className="min-h-screen bg-[oklch(0.13_0.028_261.692)] flex flex-col items-center justify-start text-white relative pt-24 pb-16 px-4 sm:px-0">
       <Navbar />
       <h1 className="text-3xl sm:text-4xl font-bold mb-10 sm:mb-20">Kim izliyor?</h1>
       <div className="grid grid-cols-2 sm:flex sm:space-x-12 mt-2 gap-6 sm:gap-0">
         {profiles.map((profile) => (
-          <div key={profile.id} className="flex flex-col items-center">
+          <div 
+            key={profile.id} 
+            className="flex flex-col items-center cursor-pointer"
+            onClick={() => navigate(`/home/${profile.id}`)} // Profil tıklanınca yönlendirme yap
+          >
             <img
               src={`https://ui-avatars.com/api/?name=${profile.name}&background=random`}
               alt={profile.name}
-              className="w-24 h-24 sm:w-34 sm:h-34 rounded-full cursor-pointer hover:opacity-80 transition-opacity"
+              className="w-24 h-24 sm:w-34 sm:h-34 rounded-full hover:opacity-80 transition-opacity"
             />
             <span className="mt-2 text-lg">{profile.name}</span>
           </div>
