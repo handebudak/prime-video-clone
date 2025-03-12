@@ -27,12 +27,13 @@ function Navbar({ profile }) {
           <button className="text-white font-bold hover:bg-white hover:text-black px-4 py-2 rounded">Filmler</button>
           <button className="text-white font-bold hover:bg-white hover:text-black px-4 py-2 rounded">TV Dizileri</button>
   
-          {/* Right */}
           <div className="w-px h-8 bg-white"></div>
   
           <img src="/assets/w-prime-logo.png" alt="Prime Video Logo" className="w-28 px-4 py-2 rounded h-auto hover:bg-sky-600" />
         </div>
-  
+        
+        {/* Right */}
+
         <img
           src={`https://ui-avatars.com/api/?name=${profile.name}&background=random`}
           alt="Profile"

@@ -41,7 +41,7 @@ function Footer() {
 }
 
 export default function Profiles() {
-  const navigate = useNavigate(); // Yönlendirme için
+  const navigate = useNavigate(); 
 
   return (
     <div className="min-h-screen bg-[oklch(0.13_0.028_261.692)] flex flex-col items-center justify-start text-white relative pt-24 pb-16 px-4 sm:px-0">
@@ -52,7 +52,7 @@ export default function Profiles() {
           <div 
             key={profile.id} 
             className="flex flex-col items-center cursor-pointer"
-            onClick={() => navigate(`/home/${profile.id}`)} // Profil tıklanınca yönlendirme yap
+            onClick={() => navigate(`/home/${profile.id}`)} 
           >
             <img
               src={`https://ui-avatars.com/api/?name=${profile.name}&background=random`}
@@ -62,7 +62,8 @@ export default function Profiles() {
             <span className="mt-2 text-lg">{profile.name}</span>
           </div>
         ))}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center cursor-pointer"
+             onClick={() => navigate("/new-profile")}>
           <div className="w-24 h-24 sm:w-34 sm:h-34 rounded-full bg-gray-600 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
             <span className="text-3xl">+</span>
           </div>
