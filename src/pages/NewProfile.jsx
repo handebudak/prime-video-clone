@@ -28,7 +28,6 @@ export default function NewProfile() {
         </a>
       </div>
 
-      {/* Butonlar */}
       <div className="fixed bottom-10 left-0 w-full flex justify-center space-x-4">
         <button 
           className="px-10 py-4 border border-gray-400 text-white text-lg rounded-lg hover:bg-gray-700 transition"

@@ -15,7 +15,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[oklch(0.13_0.028_261.692)]">
       <Navbar profile={profile} />
-      {/* Navbar’ın üstünü kapatmaması için padding ekledim */}
       <div className="pt-20">
         <Banner />
       </div>
