@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { FaSearch, FaTh, FaBookmark } from "react-icons/fa";
 import Banner from "../components/Banner";
+import MovieCarousel from "../components/MovieCarousel";
+import moviesData from "../MoviesData";
 
 const profiles = [
   { id: 1, name: "Chris" },
@@ -18,6 +20,9 @@ export default function Home() {
       <div className="pt-20">
         <Banner />
       </div>
+      <div>
+      <MovieCarousel title="Popüler Filmler" movies={moviesData} />
+    </div>
     </div>
   );
 }
