@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+/* styles.css */
+.hide-scrollbar {
+    -ms-overflow-style: none; /* Internet Explorer ve Edge için */
+    scrollbar-width: none; /* Firefox için */
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari ve diğer WebKit tabanlı tarayıcılar için */
+  }
