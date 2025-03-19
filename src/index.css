@@ -2,10 +2,10 @@
 
 /* styles.css */
 .hide-scrollbar {
-    -ms-overflow-style: none; /* Internet Explorer ve Edge için */
-    scrollbar-width: none; /* Firefox için */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
   }
   
   .hide-scrollbar::-webkit-scrollbar {
-    display: none; /* Chrome, Safari ve diğer WebKit tabanlı tarayıcılar için */
+    display: none; 
   }

@@ -43,15 +43,15 @@ const MovieSlider = () => {
 
   return (
     <div className="relative w-full mt-6 px-16 overflow-hidden">
-      {/* Başlık */}
+      {/* Header */}
       <h2 className="text-white text-xl font-semibold mb-4">
-        Romantik Filmler
+        Çok İzlenen Filmler
         <span className="ml-2 text-gray-400 cursor-pointer hover:text-white">
-          Daha fazlasını görüntüle >
+          Daha fazlasını görüntüle 
         </span>
       </h2>
 
-      {/* Sol Ok */}
+      
       {showLeftArrow && (
         <button
           onClick={scrollLeft}
@@ -61,7 +61,7 @@ const MovieSlider = () => {
         </button>
       )}
 
-      {/* Slider Konteyneri */}
+      {/* Slider */}
       <div
         ref={sliderRef}
         className="flex overflow-x-auto space-x-4 p-2 hide-scrollbar scroll-smooth"
@@ -80,7 +80,7 @@ const MovieSlider = () => {
         ))}
       </div>
 
-      {/* Sağ Ok */}
+      
       {showRightArrow && (
         <button
           onClick={scrollRight}
