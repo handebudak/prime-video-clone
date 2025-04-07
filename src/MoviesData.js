@@ -1,74 +1,136 @@
 const moviesData = [
-    {
-      id: 1,
-      title: "Inception",
-      image: "https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_QL75_UX223.5_.jpg",
-    },
-    {
-      id: 2,
-      title: "Interstellar",
-      image: "https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SY679_.jpg",
-    },
-    {
-      id: 3,
-      title: "The Substance",
-      image: "https://m.media-amazon.com/images/M/MV5BZDQ1NGE5MGMtYzdlZC00ODExLWJlMDMtNWU4NjA5OWYwMDEwXkEyXkFqcGc@._V1_QL75_UX246_.jpg",
-    },
-    {
-      id: 4,
-      title: "Anora",
-      image: "https://m.media-amazon.com/images/M/MV5BYThiN2M0NTItODRmNC00NDhlLWFiYTgtMWM2YTEyYzI3ZTY1XkEyXkFqcGc@._V1_QL75_UX298.5_.jpg",
-    },
-    {
-      id: 5,
-      title: "Parasite",
-      image: "https://m.media-amazon.com/images/M/MV5BNTRiMzJlYjItYWE1MC00Y2Q4LWE3NTYtNDM4MWQwOWM2Njg1XkEyXkFqcGc@._V1_QL75_UX1230_.jpg",
-    },
-    {
-      id: 6,
-      title: "Atatürk",
-      image: "https://m.media-amazon.com/images/M/MV5BMzNjNzMyMjAtYjg2Ni00M2M0LWExYzQtNzg3NTk5M2EyNTQwXkEyXkFqcGc@._V1_QL75_UX210_.jpg",
-    },
-    {
-      id: 7,
-      title: "Pulp Fiction",
-      image: "https://m.media-amazon.com/images/M/MV5BMTkxMTA5OTAzMl5BMl5BanBnXkFtZTgwNjA5MDc3NjE@._V1_QL75_UX1230_.jpg",
-    },
-    {
-      id: 8,
-      title: "Fight Club",
-      image: "https://m.media-amazon.com/images/M/MV5BMzgyZThmZDctNjkwYi00YzU1LWFlY2UtYTIzNmIxZTdlZjVhXkEyXkFqcGc@._V1_QL75_UX220.5_.jpg",
-    },
-    {
-      id: 9,
-      title: "Django",
-      image: "https://m.media-amazon.com/images/M/MV5BYzZkZTEwODktNTFiNC00NWIxLWJlZjUtYTc4MGFmOWQ3NWY1XkEyXkFqcGc@._V1_QL75_UX241.5_.jpg",
-    },
-    {
-      id: 10,
-      title: "Midsommar",
-      image: "https://m.media-amazon.com/images/M/MV5BOWM1ZWE2OTUtODAxYy00MjI3LWJkOWUtZTU4OWJlNjE3ODIzXkEyXkFqcGc@._V1_QL75_UX235.5_.jpg",
-    },
-    {
-      id: 11,
-      title: "Gone Girl",
-      image: "https://m.media-amazon.com/images/M/MV5BNTFkN2UwZjYtNzI5OC00MTNlLTgwNTEtYjBkOGZiNmY5NDg4XkEyXkFqcGc@._V1_QL75_UX232.5_.jpg",
-    },
-    {
-      id: 12,
-      title: "Harry Potter and the Sorcerer's Stone",
-      image: "https://m.media-amazon.com/images/M/MV5BZTk4MTM5YWYtNjkzZC00Yzk3LTgxYmItZGI5MThhZTc0YTdkXkEyXkFqcGc@._V1_QL75_UX1230_.jpg",
-    },
-    {
-      id: 13,
-      title: "Spider-Man",
-      image: "https://m.media-amazon.com/images/M/MV5BNmY2YmE3NzgtYTE3Ny00MGY0LTk0MmQtYTI5NTc0MDQ5ZmM4XkEyXkFqcGc@._V1_QL75_UX220.5_.jpg",
-    },
-    {
-      id: 14,
-      title: "The Matrix",
-      image: "https://m.media-amazon.com/images/M/MV5BOWVlOTU2MzktN2Q0Ny00Y2M5LTkzY2QtNjBjOWRhZTQwMmQxXkEyXkFqcGc@._V1_QL75_UX229.5_.jpg",
-    },
-  ];
-  
-  export default moviesData;
+  {
+    id: 1,
+    title: "Inception",
+    image: "https://m.media-amazon.com/images/M/MV5BZjQ0Y2I1MWMtNTEwNS00ZWRjLWI2ZjgtZjE5YWEwNTU3YzhkXkEyXkFqcGc@._V1_QL75_UX1230_.jpg",
+    categories: ["Bilim Kurgu", "Aksiyon", "Popüler"],
+  },
+  {
+    id: 2,
+    title: "Interstellar",
+    image: "https://m.media-amazon.com/images/M/MV5BMTcyMjEzNzcwNV5BMl5BanBnXkFtZTgwODM2Mjk0MzE@._V1_QL75_UX1230_.jpg",
+    categories: ["Bilim Kurgu", "Popüler"],
+  },
+  {
+    id: 3,
+    title: "The Substance",
+    image: "https://m.media-amazon.com/images/M/MV5BZDQ1NGE5MGMtYzdlZC00ODExLWJlMDMtNWU4NjA5OWYwMDEwXkEyXkFqcGc@._V1_QL75_UX246_.jpg",
+    categories: ["Bilim Kurgu","Korku", "Popüler"],
+  },
+  {
+    id: 4,
+    title: "Anora",
+    image: "https://m.media-amazon.com/images/M/MV5BYjU5ODk1YTAtMTk5ZC00MjhlLWFjZTEtYTQxNTM4YTBhOGNmXkEyXkFqcGc@._V1_QL75_UX531_.jpg",
+    categories: ["Dram", "Popüler"],
+  },
+  {
+    id: 5,
+    title: "Parasite",
+    image: "https://m.media-amazon.com/images/M/MV5BNTRiMzJlYjItYWE1MC00Y2Q4LWE3NTYtNDM4MWQwOWM2Njg1XkEyXkFqcGc@._V1_QL75_UX1230_.jpg",
+    categories: ["Dram", "Popüler"],
+  },
+  {
+    id: 6,
+    title: "Atatürk",
+    image: "https://m.media-amazon.com/images/M/MV5BMzNjNzMyMjAtYjg2Ni00M2M0LWExYzQtNzg3NTk5M2EyNTQwXkEyXkFqcGc@._V1_QL75_UX210_.jpg",
+    categories: ["Tarih"],
+  },
+  {
+    id: 7,
+    title: "Pulp Fiction",
+    image: "https://m.media-amazon.com/images/M/MV5BMTkxMTA5OTAzMl5BMl5BanBnXkFtZTgwNjA5MDc3NjE@._V1_QL75_UX1230_.jpg",
+    categories: ["Dram", "Popüler"],
+  },
+  {
+    id: 8,
+    title: "Fight Club",
+    image: "https://m.media-amazon.com/images/M/MV5BMzgyZThmZDctNjkwYi00YzU1LWFlY2UtYTIzNmIxZTdlZjVhXkEyXkFqcGc@._V1_QL75_UX220.5_.jpg",
+    categories: ["Popüler", "Dram", "Popüler"],
+  },
+  {
+    id: 9,
+    title: "Django",
+    image: "https://m.media-amazon.com/images/M/MV5BZGUxMmJiZmEtZjhkNi00MmFmLTk5YWUtYzFhZWZiZGIxNTQ1XkEyXkFqcGc@._V1_QL75_UX1230_.jpg",
+    categories: ["Aksiyon", "Popüler"],
+  },
+  {
+    id: 10,
+    title: "Midsommar",
+    image: "https://m.media-amazon.com/images/M/MV5BNzc0Y2Q5MjctMDZlZi00NTRmLWEyNjAtZTdiMjhiODI3M2YzXkEyXkFqcGc@._V1_QL75_UX466.5_.jpg",
+    categories: ["Korku", "Popüler"],
+  },
+  {
+    id: 11,
+    title: "Gone Girl",
+    image: "https://m.media-amazon.com/images/M/MV5BNTFkN2UwZjYtNzI5OC00MTNlLTgwNTEtYjBkOGZiNmY5NDg4XkEyXkFqcGc@._V1_QL75_UX232.5_.jpg",
+    categories: ["Gerilim", "Popüler"],
+  },
+  {
+    id: 12,
+    title: "Harry Potter and the Sorcerer's Stone",
+    image: "https://m.media-amazon.com/images/M/MV5BZTk4MTM5YWYtNjkzZC00Yzk3LTgxYmItZGI5MThhZTc0YTdkXkEyXkFqcGc@._V1_QL75_UX1230_.jpg",
+    categories: ["Fantastik", "Popüler"],
+  },
+  {
+    id: 13,
+    title: "Spider-Man",
+    image: "https://m.media-amazon.com/images/M/MV5BNGYxYzhmYjEtNDBlZC00MzE0LWE1MTEtNTgxMmQyMzc5Y2Q3XkEyXkFqcGc@._V1_QL75_UX430.5_.jpg",
+    categories: ["Aksiyon", "Fantastik", "Popüler"],
+  },
+  {
+    id: 14,
+    title: "The Matrix",
+    image: "https://m.media-amazon.com/images/M/MV5BNGQ1NDM1ZTQtNTIzNi00OTJhLThjN2YtMWEyZDQ4N2Q3ZGI2XkEyXkFqcGc@._V1_QL75_UX669_.jpg",
+    categories: ["Bilim Kurgu", "Aksiyon", "Popüler"],
+  },
+  {
+    id: 15,
+    title: "Smile 2",
+    image: "https://m.media-amazon.com/images/M/MV5BNTdhOGY2NGItYzEzYi00ODgwLTkyZWEtMGU2MGNhYTVhY2Q4XkEyXkFqcGc@._V1_QL75_UX318_.jpg",
+    categories: ["Korku", "Popüler"],
+  },
+  {
+    id: 16,
+    title: "The Conjuring",
+    image: "https://m.media-amazon.com/images/M/MV5BODA2NzZmZTQtN2I3MS00NWNiLTlhZTYtNWM0ZDZmOWYwMjkxXkEyXkFqcGc@._V1_QL75_UX280.5_.jpg",
+    categories: ["Korku", "Popüler"],
+  },
+  {
+    id: 17,
+    title: "The Martian",
+    image: "https://m.media-amazon.com/images/M/MV5BYjMzMGZjNjItYWExYy00MGYxLTk3ZDktMzBjNzYzYzIyMjY5XkEyXkFqcGc@._V1_QL75_UX334.5_.jpg",
+    categories: ["Bilim Kurgu", "Popüler"],
+  },
+  {
+    id: 18,
+    title: "Hereditary",
+    image: "https://m.media-amazon.com/images/M/MV5BNGQ1MWYzZmEtOTA3MS00YTYxLWJjZTItZGNjNTU0YjE0NDM0XkEyXkFqcGc@._V1_QL75_UX241.5_.jpg",
+    categories: ["Korku", "Popüler"],
+  },
+  {
+    id: 19,
+    title: "Black Swan",
+    image: "https://m.media-amazon.com/images/M/MV5BMTYxMjk5ODExOF5BMl5BanBnXkFtZTcwNzExMzQ3Mw@@._V1_QL75_UX562.5_.jpg",
+    categories: ["Korku", "Dram", "Popüler"],
+  },
+  {
+    id: 20,
+    title: "Tenet",
+    image: "https://m.media-amazon.com/images/M/MV5BNjQzNWZmYWItMzM3Yi00NmNmLWFmMDMtYmNkMjU2MDllZTlmXkEyXkFqcGc@._V1_QL75_UX1230_.jpg",
+    categories: ["Bilim Kurgu", "Aksiyon", "Popüler"],
+  },
+  {
+    id: 21,
+    title: "Marriage Story",
+    image: "https://m.media-amazon.com/images/M/MV5BYjQ2MDcxMWEtMjZjMi00MGJjLTliZDItMjQyMjM3MzIxMTU1XkEyXkFqcGc@._V1_QL75_UX1230_.jpg",
+    categories: ["Dram", "Popüler"],
+  },
+  {
+    id: 21,
+    title: "Léon",
+    image: "https://m.media-amazon.com/images/M/MV5BYmQ5NmM1OGItMDE5ZC00OWQ5LWEyOTAtZTQ4ZWE5YTc5MjFjXkEyXkFqcGc@._V1_QL75_UX570_.jpg",
+    categories: ["Dram", "Aksiyon"],
+  },
+];
+
+export default moviesData;

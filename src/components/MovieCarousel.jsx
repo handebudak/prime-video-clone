@@ -1,9 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
-import moviesData from "../MoviesData";
-import "../index.css"; 
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; 
+import "../index.css";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const MovieSlider = () => {
+export default function MovieCarousel({ title, movies }) {
   const sliderRef = useRef(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
@@ -30,28 +29,22 @@ const MovieSlider = () => {
   }, []);
 
   const scrollLeft = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: -300, behavior: "smooth" });
-    }
+    sliderRef.current?.scrollBy({ left: -300, behavior: "smooth" });
   };
 
   const scrollRight = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
-    }
+    sliderRef.current?.scrollBy({ left: 300, behavior: "smooth" });
   };
 
   return (
     <div className="relative w-full mt-6 px-16 overflow-hidden">
-      {/* Header */}
       <h2 className="text-white text-xl font-semibold mb-4">
-        Çok İzlenen Filmler
+        {title}
         <span className="ml-2 text-gray-400 cursor-pointer hover:text-white">
-          Daha fazlasını görüntüle 
+          Daha fazlasını görüntüle
         </span>
       </h2>
 
-      
       {showLeftArrow && (
         <button
           onClick={scrollLeft}
@@ -61,12 +54,11 @@ const MovieSlider = () => {
         </button>
       )}
 
-      {/* Slider */}
       <div
         ref={sliderRef}
         className="flex overflow-x-auto space-x-4 p-2 hide-scrollbar scroll-smooth"
       >
-        {moviesData.map((movie) => (
+        {movies.map((movie) => (
           <div
             key={movie.id}
             className="min-w-[250px] flex-shrink-0 transition-transform hover:scale-105"
@@ -80,7 +72,6 @@ const MovieSlider = () => {
         ))}
       </div>
 
-      
       {showRightArrow && (
         <button
           onClick={scrollRight}
@@ -91,6 +82,4 @@ const MovieSlider = () => {
       )}
     </div>
   );
-};
-
-export default MovieSlider;
+}

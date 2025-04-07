@@ -3,7 +3,7 @@ import { FaPlay, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const banners = [
   {
-    id: 3,
+    id: 1,
     title: "Dune: Part One",
     subtitle:
       "Paul Atreides arrives on Arrakis after his father accepts the stewardship of the dangerous planet. However, chaos ensues after a betrayal as forces clash to control melange, a precious resource.",
@@ -11,22 +11,22 @@ const banners = [
       "https://m.media-amazon.com/images/M/MV5BNzkwMTI1ODEtNzk0MS00NDM3LTljNWMtOGYyZGY2MzU0NWM5XkEyXkFqcGc@._V1_QL75_UX1230_.jpg",
   },
   {
-    id: 1,
+    id: 2,
     title: "ATATÜRK",
     subtitle: "1881 - 1919",
     image: "/assets/ataturk-m.jpg",
   },
   {
-    id: 2,
+    id: 3,
     title: "INTERSTELLAR",
     subtitle: "A journey beyond the stars",
-    image: "/assets/interstellar-m.jpg",
+    image: "https://m.media-amazon.com/images/M/MV5BMTcyMjEzNzcwNV5BMl5BanBnXkFtZTgwODM2Mjk0MzE@._V1_QL75_UX1230_.jpg",
   },
   {
-    id: 3,
+    id: 4,
     title: "INCEPTION",
     subtitle: "Your mind is the scene of the crime",
-    image: "/assets/inception-m.jpg",
+    image: "https://m.media-amazon.com/images/M/MV5BN2ZlNDY4OGEtNTk0Yy00OGI1LWI0MGItNmIzY2NmOTk3ZWMxXkEyXkFqcGc@._V1_QL75_UX1230_.jpg",
   },
 ];
 
