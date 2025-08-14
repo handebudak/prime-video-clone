@@ -37,10 +37,10 @@ export default function MovieCarousel({ title, movies }) {
   };
 
   return (
-    <div className="relative w-full mt-6 px-16 overflow-hidden">
-      <h2 className="text-white text-xl font-semibold mb-4">
+    <div className="relative w-full mt-4 md:mt-6 px-4 md:px-16 overflow-hidden">
+      <h2 className="text-white text-lg md:text-xl font-semibold mb-3 md:mb-4">
         {title}
-        <span className="ml-2 text-gray-400 cursor-pointer hover:text-white">
+        <span className="ml-2 text-gray-400 cursor-pointer hover:text-white text-sm md:text-base">
           Daha fazlasını görüntüle
         </span>
       </h2>
@@ -48,7 +48,7 @@ export default function MovieCarousel({ title, movies }) {
       {showLeftArrow && (
         <button
           onClick={scrollLeft}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 p-3 rounded-full text-white text-2xl hover:bg-black z-10"
+          className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 p-2 md:p-3 rounded-full text-white text-lg md:text-2xl hover:bg-black z-10"
         >
           <FaChevronLeft />
         </button>
@@ -56,17 +56,17 @@ export default function MovieCarousel({ title, movies }) {
 
       <div
         ref={sliderRef}
-        className="flex overflow-x-auto space-x-4 p-2 hide-scrollbar scroll-smooth"
+        className="flex overflow-x-auto space-x-2 md:space-x-4 p-2 hide-scrollbar scroll-smooth"
       >
         {movies.map((movie) => (
           <div
             key={movie.id}
-            className="min-w-[250px] flex-shrink-0 transition-transform hover:scale-105"
+            className="min-w-[120px] sm:min-w-[180px] md:min-w-[250px] flex-shrink-0 transition-transform hover:scale-105"
           >
             <img
               src={movie.image}
               alt={movie.title}
-              className="w-full h-[150px] object-cover rounded-lg shadow-lg"
+              className="w-full h-[80px] sm:h-[120px] md:h-[150px] object-cover rounded-lg shadow-lg"
             />
           </div>
         ))}
@@ -75,7 +75,7 @@ export default function MovieCarousel({ title, movies }) {
       {showRightArrow && (
         <button
           onClick={scrollRight}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 p-3 rounded-full text-white text-2xl hover:bg-black z-10"
+          className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 p-2 md:p-3 rounded-full text-white text-lg md:text-2xl hover:bg-black z-10"
         >
           <FaChevronRight />
         </button>

@@ -54,27 +54,28 @@ export default function Banner() {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-[500px] text-white overflow-hidden">
+    <div className="relative w-full h-[300px] md:h-[500px] text-white overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-500"
         style={{
           backgroundImage: `url('${banners[currentIndex].image}')`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent flex items-center px-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent flex items-center px-4 md:px-20">
           <div className="max-w-lg">
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-2xl md:text-5xl font-bold">
               {banners[currentIndex].title}
             </h1>
-            <p className="text-lg text-gray-300 mt-2">
+            <p className="text-sm md:text-lg text-gray-300 mt-2">
               {banners[currentIndex].subtitle}
             </p>
-            <div className="flex items-center space-x-4 mt-4">
-              <button className="group bg-gray-700 text-white text-xl px-6 py-4 rounded font-bold flex items-center hover:bg-white hover:text-black">
+            <div className="flex items-center space-x-2 md:space-x-4 mt-4">
+              <button className="group bg-gray-700 text-white text-sm md:text-xl px-3 md:px-6 py-2 md:py-4 rounded font-bold flex items-center hover:bg-white hover:text-black">
                 <FaPlay className="mr-2 text-white group-hover:text-black transition-colors duration-100" />
-                Şimdi İzle
+                <span className="hidden sm:inline">Şimdi İzle</span>
+                <span className="sm:hidden">İzle</span>
               </button>
-              <button className="bg-gray-700 text-white text-xl px-6 py-4 rounded-full font-bold hover:bg-white hover:text-black">
+              <button className="bg-gray-700 text-white text-sm md:text-xl px-3 md:px-6 py-2 md:py-4 rounded-full font-bold hover:bg-white hover:text-black">
                 +
               </button>
             </div>
@@ -85,16 +86,28 @@ export default function Banner() {
       {/* Buttons */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-transparent p-3 text-white text-2xl hover:scale-125 transition-transform duration-200 cursor-pointer"
+        className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-transparent p-2 md:p-3 text-white text-xl md:text-2xl hover:scale-125 transition-transform duration-200 cursor-pointer"
       >
         <FaChevronLeft />
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-transparent p-3 text-white text-2xl hover:scale-125 transition-transform duration-200 cursor-pointer"
+        className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-transparent p-2 md:p-3 text-white text-xl md:text-2xl hover:scale-125 transition-transform duration-200 cursor-pointer"
       >
         <FaChevronRight />
       </button>
+
+      {/* Dots indicator */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {banners.map((_, index) => (
+          <div
+            key={index}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex ? 'bg-white' : 'bg-white/50'
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
